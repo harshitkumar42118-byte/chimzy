@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inconsolata:wght@200..900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            font-family: "DM Sans", sans-serif;
+            color: #15143966;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #1e1b4b;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding: 40px;
+            gap: 110px;
+        }
+
+        .down {
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            align-items: center;
+            gap: 5px;
+        }
+
+        header {
+            width: 100%;
+            max-width: 1170px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+
+            align-items: center;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 100%;
+            letter-spacing: -0.29px;
+            text-align: center;
+            max-width: 107px;
+            opacity: 1;
+            color: #1E0E62;
+            display: flex;
+            justify-content: space-between;
+            margin-right: 32px;
+            width: 100%;
+            height: 32px;
+
+        }
+
+        .ppcr {
+            display: none;
+            justify-content: center;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .ppcl {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            max-width: 309px;
+            width: 100%;
+        }
+
+        .nav-right a {
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .btn-signup {
+            background-color: #25DAC5;
+            color: white;
+            padding: 10px 22px;
+            border-radius: 25px;
+            font-weight: 600;
+        }
+
+
+        label[for="lines"] {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            max-width: 24px;
+            height: 18px;
+            cursor: pointer;
+            z-index: 100;
+            width: 100%;
+        }
+
+        label[for="lines"] span {
+            display: block;
+            width: 100%;
+            height: 2.5px;
+            background-color: #1E0E62;
+            border-radius: 100px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-left {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+        }
+
+        main {
+
+            flex: 1;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+
+            gap: 80px;
+
+
+        }
+
+        .hero h1 {
+            max-width: 600px;
+            color: #1E0E62;
+            opacity: 1;
+            margin-bottom: 57px;
+            width: 100%;
+        }
+
+        .form {
+            max-width: 470px;
+            width: 100%;
+            height: 283px;
+        }
+
+        .ahl {
+            gap: 35px;
+            display: flex;
+
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        .input {
+            max-width: 470px;
+            padding: 14px 20px;
+            border: 1px solid #EBEAED;
+            font-size: 14px;
+            color: #1e1b4b;
+            outline: none;
+            opacity: 1;
+            border-radius: 100px;
+            border-width: 2px;
+            outline: none;
+            width: 100%;
+            height: 60px;
+
+        }
+
+        .input::placeholder {
+            color: #a0aec0;
+        }
+
+        .input:focus {
+            border-color: #EBEAED;
+        }
+
+        .signin {
+            padding: 14px 20px;
+            background-color: #1fd1af;
+            color: #ffffff;
+            border: none;
+            margin-top: 8px;
+            max-width: 470px;
+            opacity: 1;
+            border-radius: 100px;
+            cursor: pointer;
+            width: 100%;
+            height: 60px;
+
+        }
+
+        .confirm {
+            text-align: center;
+            font-size: 12px;
+            color: #a0aec0;
+            margin-top: 16px;
+            font-weight: 400;
+
+        }
+
+        iframe {
+            border-radius: 10px;
+        }
+
+        .v-card {
+            max-width: 470px;
+            width: 100%;
+
+        }
+
+        .v-card p {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 28px;
+            margin-top: 32px;
+        }
+
+        .YouTube {
+            max-width: 470px;
+            height: 381px;
+            opacity: 1;
+            border-radius: 10px;
+            width: 100%;
+            margin-bottom: 67px;
+
+        }
+
+        @media (max-width: 992px) {
+            main {
+                gap: 80px;
+                flex-direction: column;
+                padding: 0;
+                text-align: center;
+            }
+
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 20px;
+            }
+
+            .hero h1 {
+                font-size: 25px;
+                line-height: 42px;
+                max-width: 600px;
+                width: 100%;
+                margin-bottom: 30px;
+            }
+
+            .form,
+            .v-card {
+                width: 100%;
+                max-width: 470px;
+                text-align: center;
+                height: 217px;
+            }
+
+            header {
+
+                display: flex;
+                align-items: center;
+            }
+
+            .input,
+            .signin {
+                width: 100%;
+                max-width: 470px;
+            }
+
+            .down {
+                display: flex;
+                justify-content: center;
+                flex-direction: row;
+                align-items: center;
+                gap: 5px;
+            }
+
+            .YouTube {
+                flex-direction: column;
+                display: flex;
+                align-items: center;
+
+            }
+
+            iframe {
+                max-width: 470px;
+                width: 100%;
+            }
+
+            .logo {
+                text-align: right;
+            }
+
+            .confirm {
+                margin-left: 0;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            .ppcr {
+                display: none;
+                flex-direction: column;
+            }
+
+            .ppcl {
+                display:none;
+
+            }
+
+            .hero {
+                text-align: center;
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+
+            }
+
+            .ahl {
+                flex-direction: column;
+                display: flex;
+
+            }
+
+            .v-card p {
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 28px;
+                margin-top: 32px;
+                max-width: 470px;
+                width: 100%;
+                margin-bottom: 30px;
+            }
+
+            header {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            label[for="lines"] {
+                display: flex;
+            }
+
+            .nav-right {
+                position: fixed;
+                top: 0;
+                left: 100%;
+                width: 100%;
+                height: 100%;
+                background: white;
+                flex-direction: column;
+                justify-content: center;
+                gap: 28px;
+                transition: left 0.3s ease;
+                z-index: 99;
+            }
+
+            #lines:checked~.nav-right {
+                left: 0;
+            }
+
+
+        }
+
+        @media (max-width:340px) {
+            main {
+                width: 100%;
+                max-width: 1200px;
+                margin: 0 auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+            }
+             .ppcl {
+                display:none;
+
+            }
+             .ppcr {
+                display: flex;
+                flex-direction: column;
+            }
+
+            body {
+                background-color: #ffffff;
+                color: #1e1b4b;
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+
+
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="nav-left">
+            <a style="line-height: 100%;" href="#" class="logo">Startup 3</a>
+            <div class="ppcl">
+                <span class="down">
+                    <a style="line-height: 26px;" href="#">Products</a>
+                    <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M11.1384 0.926409C11.1384 0.837123 11.0938 0.736676 11.0268 0.669712L10.4688 0.111676C10.4018 0.0447122 10.3013 6.9499e-05 10.2121 6.9499e-05C10.1228 6.9499e-05 10.0223 0.0447122 9.95536 0.111676L5.5692 4.49784L1.18304 0.111676C1.11607 0.0447122 1.01563 6.9499e-05 0.926339 6.9499e-05C0.825893 6.9499e-05 0.736607 0.0447122 0.669643 0.111676L0.111607 0.669712C0.0446429 0.736676 7.45058e-08 0.837123 7.45058e-08 0.926409C7.45058e-08 1.01569 0.0446429 1.11614 0.111607 1.1831L5.3125 6.384C5.37946 6.45096 5.47991 6.49561 5.5692 6.49561C5.65848 6.49561 5.75893 6.45096 5.82589 6.384L11.0268 1.1831C11.0938 1.11614 11.1384 1.01569 11.1384 0.926409Z"
+                            fill="#151439" fill-opacity="0.4" />
+                    </svg>
+                </span>
+                <a style="line-height: 26px;" href="#">Pricing</a>
+                <a style="line-height: 26px;" href="#">Community</a>
+            </div>
+
+        </div>
+        <input type="checkbox" id="lines" hidden>
+        <label for="lines">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <div class="nav-right">
+            <div class="ppcr">
+                <span class="down">
+                    <a href="#">Products</a>
+                    <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M11.1384 0.926409C11.1384 0.837123 11.0938 0.736676 11.0268 0.669712L10.4688 0.111676C10.4018 0.0447122 10.3013 6.9499e-05 10.2121 6.9499e-05C10.1228 6.9499e-05 10.0223 0.0447122 9.95536 0.111676L5.5692 4.49784L1.18304 0.111676C1.11607 0.0447122 1.01563 6.9499e-05 0.926339 6.9499e-05C0.825893 6.9499e-05 0.736607 0.0447122 0.669643 0.111676L0.111607 0.669712C0.0446429 0.736676 7.45058e-08 0.837123 7.45058e-08 0.926409C7.45058e-08 1.01569 0.0446429 1.11614 0.111607 1.1831L5.3125 6.384C5.37946 6.45096 5.47991 6.49561 5.5692 6.49561C5.65848 6.49561 5.75893 6.45096 5.82589 6.384L11.0268 1.1831C11.0938 1.11614 11.1384 1.01569 11.1384 0.926409Z"
+                            fill="#151439" fill-opacity="0.4" />
+                    </svg>
+                </span>
+                <a href="#">Pricing</a>
+                <a href="#">Community</a>
+            </div>
+            <div class="ahl">
+                <a href="#">API</a>
+                <a href="#">Help</a>
+                <a href="#">Login</a>
+            </div>
+            <a href="#" class="btn-signup">Sign Up</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="hero">
+            <h1>A high-quality solution for those who want a beautiful startup website quickly</h1>
+            <form class="form">
+                <div class="form-group">
+                    <input type="email" class="input" placeholder="Your email" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="input" placeholder="Your password" required>
+                </div>
+                <button type="submit" class="signin">Sign In</button>
+                <p class="confirm">By signing up, you agree to the Terms of Service</p>
+            </form>
+        </div>
+
+        <div class="v-card">
+            <div class="YouTube">
+                <iframe width="470" height="265" src="https://www.youtube.com/embed/rwTy9WYTq2Q?si=MDs4QP7iszaLdhke"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p>We made it so beutiful and simple. It combines landings, pages, blogs and shop screens. It
+                    isdefinitely the
+                    tool you need in your collection! </p>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

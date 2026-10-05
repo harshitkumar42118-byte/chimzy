@@ -5,30 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="icone" href="./Group.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
         * {
-            box-sizing: border-box;
-            padding: 0;
             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
             text-decoration: none;
         }
 
         .container {
-            width: 1440px;
+            width: 100%;
+            max-width: 1440px;
             height: 810px;
         }
 
-        .all-bg {
+        .back-g {
             position: relative;
             isolation: isolate;
         }
 
-        .all-bg::before {
+        .back-g::before {
             content: "";
-            background-image: url(./bg-all.png);
-            opacity: 3%;
+            background-image: url(./iconbg.png);
             background-position: center;
             background-size: cover;
 
@@ -37,21 +40,12 @@
             z-index: -1;
         }
 
-        /* font-family: "Lato", sans-serif; */
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            text-decoration: none;
-        }
 
         .head {
             width: 276px;
             height: 48px;
             opacity: 1;
-            top: 89px;
-            left: 189.5px;
 
         }
 
@@ -72,7 +66,7 @@
 
         }
 
-        .sign {
+        .login {
             width: 228px;
             height: 74px;
             opacity: 1;
@@ -97,12 +91,12 @@
             font-style: Regular;
             font-size: 14px;
             line-height: 150%;
-            letter-spacing: 0%;
 
         }
 
-        .left {
-            width: 340.5px;
+        .left-side {
+            max-width: 340.5px;
+            width: 100%;
             height: 407.5px;
             opacity: 1;
             top: 185px;
@@ -111,9 +105,10 @@
 
         }
 
-        .id {
+        .form {
 
-            width: 340px;
+            max-width: 340px;
+            width: 100%;
             height: 131px;
             opacity: 1;
             top: 291px;
@@ -123,8 +118,9 @@
         }
 
         .email {
-            width: 340px;
+            max-width: 340px;
             height: 44px;
+            width: 100%;
             opacity: 1;
             border-width: 1px;
             gap: 10px;
@@ -138,7 +134,8 @@
         }
 
         .password {
-            width: 340px;
+            max-width: 340px;
+            width: 100%;
             height: 44px;
             opacity: 1;
             border: 1px solid #EBEAED;
@@ -153,7 +150,8 @@
         }
 
         .input {
-            width: 280px;
+            max-width: 280px;
+            width: 100%;
             height: 24px;
             opacity: 1;
             gap: 10px;
@@ -163,7 +161,8 @@
         }
 
         .pass {
-            width: 252px;
+            max-width: 252px;
+            width: 100%;
             height: 24px;
             opacity: 1;
             gap: 10px;
@@ -173,7 +172,8 @@
         }
 
         .forgot {
-            width: 340px;
+            max-width: 340px;
+            width: 100%;
             height: 21px;
             justify-content: space-between;
             opacity: 1;
@@ -183,7 +183,8 @@
         }
 
         .call {
-            width: 113px;
+            max-width: 113px;
+            width: 100%;
             height: 21px;
             opacity: 1;
             gap: 10px;
@@ -193,13 +194,13 @@
         }
 
         .click {
-            width: 14px;
+            max-width: 14px;
             height: 14px;
             opacity: 1;
             gap: 5.83px;
             border-radius: 2.33px;
             padding: 2.33px;
-
+width: 100%;
         }
 
         .remember {
@@ -224,12 +225,13 @@
 
         }
 
-        .icone {
+        .icon {
             margin-left: 16px;
         }
 
         .btn {
-            width: 340px;
+            max-width: 340px;
+            width: 100%;
             height: 48px;
             gap: 10px;
             border-radius: 50px;
@@ -266,13 +268,14 @@
             margin-bottom: 20px;
         }
 
-        .frame1 {
-            width: 50%;
+        .box {
+            max-width: 50%;
+            width: 100%;
         }
 
         .line {
-            max-width: 115px;
             width: 100%;
+            max-width: 115px;;
             height: 1px;
             background-color: rgba(201, 207, 219, 0.3);
         }
@@ -285,15 +288,17 @@
             color: #9197A6;
         }
 
-        .box {
+        .app {
             display: flex;
-            width: 340px;
+            max-width: 340px;
+            width: 100%;
             height: 41px
         }
 
         .google {
             display: flex;
-            width: 166px;
+            max-width: 166px;
+            width: 100%;
             height: 41px;
             opacity: 1;
             border-width: 1px;
@@ -318,11 +323,12 @@
 
         }
 
-        .fb {
+        .facebook {
             margin-left: 8px;
             display: flex;
-            width: 166px;
+            max-width: 166px;
             height: 41px;
+            width: 100%;
             opacity: 1;
             border-width: 1px;
             padding-top: 10px;
@@ -335,8 +341,8 @@
 
         }
 
-        .facebook {
-            font-family: Lato;
+        .fb {
+            font-family: "Lato", sans-serif;
             font-weight: 400;
             font-style: Regular;
             font-size: 14px;
@@ -349,22 +355,22 @@
 </head>
 
 <body>
-    <section class="all-bg">
+    <section style="background-image:url(./iconbg.png) ;" class="back-g">
         <div class="container">
-            <div class="frame1">
+            <div class="box">
                 <div class="head">
                     <img src=" ./Logo-2.png " alt="logo">
                 </div>
-                <div class="left">
-                    <div class="sign">
+                <div class="left-side">
+                    <div class="login">
                         <h2>Sign in</h2>
 
-                        <p>Don’t have an account? <a href="Register here">Register here</a></p>
+                        <p>Don’t have an account? <a href="register">Register here</a></p>
 
                     </div>
-                    <div class="id">
+                    <div class="form">
                         <div class="email">
-                            <svg class="icone" width="18" height="18" viewBox="0 0 18 18" fill="none"
+                            <svg class="icon" width="18" height="18" viewBox="0 0 18 18" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M3 3H15C15.825 3 16.5 3.675 16.5 4.5V13.5C16.5 14.325 15.825 15 15 15H3C2.175 15 1.5 14.325 1.5 13.5V4.5C1.5 3.675 2.175 3 3 3Z"
@@ -375,7 +381,7 @@
                             <input type="email" class="input" placeholder=" Email" required>
                         </div>
                         <div class="password">
-                            <svg class="icone" width="18" height="18" viewBox="0 0 18 18" fill="none"
+                            <svg class="icon" width="18" height="18" viewBox="0 0 18 18" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_138479_6)">
                                     <path
@@ -415,7 +421,7 @@
                             <h3 class="or-with">or continue with</h3>
                             <div class="line"></div>
                         </div>
-                        <div class="box">
+                        <div class="app">
                             <a href="https://www.google.com/">
                                 <div class="google">
                                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
@@ -437,7 +443,7 @@
                                 </div>
                             </a>
                             <a href="https://www.facebook.com/" target="_blank">
-                                <div class="fb">
+                                <div class="facebook">
 
                                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -455,7 +461,7 @@
                                             </clipPath>
                                         </defs>
                                     </svg>
-                                    <h3 class="facebook"> Facebook</h3>
+                                    <h3 class="fb"> Facebook</h3>
 
                                 </div>
                             </a>
@@ -466,11 +472,10 @@
             </div>
             <div frame2>
 
+
             </div>
         </div>
     </section>
-
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>

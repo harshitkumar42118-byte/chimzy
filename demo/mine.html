@@ -5,68 +5,132 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SPECTOR</title>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Press+Start+2P&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo:wght@300;400;600;700;800&family=Press+Start+2P&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
             padding: 0;
-            text-decoration: none;
             box-sizing: border-box;
+            text-decoration: none;
             font-family: "Exo", sans-serif;
+        }
 
+        body {
+            background-color: #000;
+            color: white;
         }
 
         .container {
             max-width: 1170px;
             margin: 0 auto;
-            align-items: center;
-
+            padding: 0 20px;
         }
 
-        section {
-            background-color: black;
-            min-height: 100vh;
-        }
-
-        h1 {
-            color: white;
-            padding-top: 25px;
+        /* Header */
+        header {
+            padding: 25px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
         }
 
         .head {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            flex-direction: row;
         }
-        .links{
+
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            letter-spacing: 3px;
+            background: linear-gradient(90deg, #ff2a6d, #05d9e8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .links {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            text-align: center;
-
+            gap: 35px;
         }
 
+        .links a {
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 500;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        .links a:hover {
+            color: #05d9e8;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 72px;
+            font-weight: 800;
+            letter-spacing: 4px;
+            margin-bottom: 20px;
+            background: linear-gradient(90deg, #ff2a6d, #05d9e8, #d300c5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: rgba(255, 255, 255, 0.7);
+            max-width: 600px;
+            margin: 0 auto 40px;
+            line-height: 1.6;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 40px;
+            background: linear-gradient(90deg, #ff2a6d, #d300c5);
+            color: white;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255, 42, 109, 0.4);
+        }
     </style>
 </head>
 
 <body>
-    <section>
+
+    <header>
         <div class="container">
             <div class="head">
-                <h1>SPECTOR</h1>
+                <div class="logo">SPECTOR</div>
                 <div class="links">
-                <a href="#">products</a>
-                <a href="#">products</a>
-                <a href="#">products</a>
-                <a href="#">products</a>
-             </div>
+                    <a href="#">Home</a>
+                    <a href="#">Features</a>
+                    <a href="#">Download</a>
+                    <a href="#">About</a>
+                </div>
             </div>
+        </div>
+    </header>
 
+    <section class="hero">
+        <div class="container">
+            <h1>SPECTOR</h1>
+            <p>Your desktop AI assistant with out-of-boundary imagination. Talk. Control. Create.</p>
+            <a href="#" class="btn">Coming Soon</a>
         </div>
     </section>
+
 </body>
 
 </html>
